@@ -21,9 +21,19 @@ WebUI.callTestCase(findTestCase('General/Go to URL'), [:], FailureHandling.STOP_
 
 WebUI.scrollToElement(findTestObject('Object Practice Form/Input Text', [('id') : 'currentAddress']), 0)
 
+WebUI.delay(3)
+
+WebUI.takeScreenshot()
+
 WebUI.click(findTestObject('Object Practice Form/Button/Button Submit'))
 
 WebUI.verifyElementAttributeValue(findTestObject('Object Practice Form/Form'), 'class', 'was-validated', 0)
 
 WebUI.scrollToElement(findTestObject('Object Practice Form/Title Page and Modal/Title Form'), 0)
+
+WebUI.delay(3)
+
+WebUI.takeScreenshot()
+
+WebUI.closeBrowser()
 

@@ -30,6 +30,10 @@ WebUI.click(findTestObject('Object Practice Form/Gender Options', [('genderOptio
 
 WebUI.setText(findTestObject('Object Practice Form/Input Text', [('id') : 'userNumber']), '1234567890')
 
+WebUI.delay(3)
+
+WebUI.takeScreenshot()
+
 WebUI.scrollToElement(findTestObject('Object Practice Form/Input Text', [('id') : 'currentAddress']), 0)
 
 WebUI.click(findTestObject('Object Practice Form/Button/Button Submit'))
@@ -37,4 +41,10 @@ WebUI.click(findTestObject('Object Practice Form/Button/Button Submit'))
 WebUI.verifyElementAttributeValue(findTestObject('Object Practice Form/Form'), 'class', 'was-validated', 0)
 
 WebUI.scrollToElement(findTestObject('Object Practice Form/Title Page and Modal/Title Form'), 0)
+
+WebUI.delay(3)
+
+WebUI.takeScreenshot()
+
+WebUI.closeBrowser()
 

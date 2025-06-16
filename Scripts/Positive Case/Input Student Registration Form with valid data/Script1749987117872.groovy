@@ -17,8 +17,6 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('General/Go to URL'), [:], FailureHandling.STOP_ON_FAILURE)
-
 WebUI.setText(findTestObject('Object Practice Form/Input Text', [('id') : 'firstName']), 'Windah')
 
 WebUI.setText(findTestObject('Object Practice Form/Input Text', [('id') : 'lastName']), 'Anomali')
@@ -71,6 +69,10 @@ WebUI.click(findTestObject('Object Practice Form/Hobbies Options', [('hobbiesOpt
 
 WebUI.uploadFile(findTestObject('Object Practice Form/Input Text', [('id') : 'uploadPicture']), 'C:\\Users\\ASUS\\Downloads\\th.jpg')
 
+WebUI.delay(3)
+
+WebUI.takeScreenshot()
+
 WebUI.scrollToElement(findTestObject('Object Practice Form/Input Text', [('id') : 'currentAddress']), 0)
 
 WebUI.setText(findTestObject('Object Practice Form/Input Text', [('id') : 'currentAddress']), 'Jalan Suka Suka Ya Ya Ya')
@@ -83,9 +85,23 @@ WebUI.click(findTestObject('Object Practice Form/Input Text', [('id') : 'city'])
 
 WebUI.click(findTestObject('Object Practice Form/Dropdown State and City/City_Noida'))
 
+WebUI.delay(3)
+
+WebUI.takeScreenshot()
+
 WebUI.click(findTestObject('Object Practice Form/Button/Button Submit'))
+
+WebUI.delay(3)
+
+WebUI.takeScreenshot()
 
 WebUI.verifyElementVisible(findTestObject('Object Practice Form/Title Page and Modal/Title After Submit'))
 
 WebUI.enhancedClick(findTestObject('Object Practice Form/Button/Button Close'))
+
+WebUI.scrollToElement(findTestObject('Object Practice Form/Title Page and Modal/Title Form'), 0)
+
+WebUI.waitForElementVisible(findTestObject('Object Practice Form/Title Page and Modal/Title Form'), 0)
+
+WebUI.closeBrowser()
 
